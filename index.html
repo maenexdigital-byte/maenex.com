@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maenex | Learn Cybersecurity. Share Knowledge.</title>
+  <meta name="description" content="Free cybersecurity notes, labs, and resources. Documenting the journey through Security+ and beyond.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <img src="logo.png" alt="Maenex" class="nav-logo">
+        <span class="nav-name">MAENEX</span>
+      </a>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">Home</a>
+        <div class="nav-dropdown">
+          <a href="#secplus" class="nav-link">Security+ <span class="caret">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#secplus">Chapter 1 — General Concepts</a>
+            <a href="#secplus" class="locked-link">Chapter 2 — Threats <span class="lock-icon">🔒</span></a>
+            <a href="#secplus" class="locked-link">Chapter 3 — Architecture <span class="lock-icon">🔒</span></a>
+          </div>
+        </div>
+        <a href="#labs" class="nav-link">Labs</a>
+        <a href="#notes" class="nav-link">Notes</a>
+        <a href="#resources" class="nav-link">Resources</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#">Home</a>
+    <a href="#secplus">Security+</a>
+    <a href="#labs">Labs</a>
+    <a href="#notes">Notes</a>
+    <a href="#resources">Resources</a>
+    <a href="#about">About</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Currently studying: CompTIA Security+ (SY0-701)
+        </div>
+        <h1 class="hero-title">
+          Learn Cybersecurity.<br>
+          Share Knowledge.<br>
+          <span class="accent-gradient">Grow Together.</span>
+        </h1>
+        <p class="hero-sub">
+          I'm documenting my journey through cybersecurity — starting with Security+ and beyond. All notes, labs, and resources are free to help others learn and grow.
+        </p>
+        <div class="hero-actions">
+          <a href="#secplus" class="btn-primary">Start Learning →</a>
+          <a href="#secplus" class="btn-ghost">Explore Security+ ⊞</a>
+        </div>
+        <div class="hero-features">
+          <div class="feature-item">
+            <span class="feature-icon">📖</span>
+            <div>
+              <strong>Free Resources</strong>
+              <span>100% free, always</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🔬</span>
+            <div>
+              <strong>Hands-On Labs</strong>
+              <span>Real world practice</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📋</span>
+            <div>
+              <strong>Study Notes</strong>
+              <span>Simplified & organized</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📈</span>
+            <div>
+              <strong>Always Growing</strong>
+              <span>New content added</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-logo-wrap">
+          <div class="hero-glow"></div>
+          <img src="logo.png" alt="Maenex" class="hero-logo-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-icon">🛡️</span>
+        <span class="stat-num">1</span>
+        <div>
+          <strong>Certification</strong>
+          <span>Security+ (in progress)</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-icon">📄</span>
+        <span class="stat-num">1+</span>
+        <div>
+          <strong>Study Notes</strong>
+          <span>And growing</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-icon">🔬</span>
+        <span class="stat-num">1+</span>
+        <div>
+          <strong>Labs</strong>
+          <span>Practical walkthroughs</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-icon">🔧</span>
+        <span class="stat-num">1+</span>
+        <div>
+          <strong>Projects</strong>
+          <span>Hands-on projects</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-icon">📅</span>
+        <span class="stat-num">Always</span>
+        <div>
+          <strong>Improving</strong>
+          <span>New content weekly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT GRID -->
+  <section class="content-section" id="secplus">
+    <div class="content-grid">
+
+      <!-- LEFT: Security+ Progress -->
+      <div class="content-card focus-card">
+        <div class="card-label">
+          <span class="label-icon">🎯</span> Current Focus
+        </div>
+        <div class="focus-header">
+          <div class="cert-logo">Security+</div>
+          <div>
+            <h3>CompTIA Security+ (SY0-701)</h3>
+            <p>My study notes, exam objectives, and resources to help you pass Security+.</p>
+          </div>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 16.6%"></div>
+          </div>
+          <span class="progress-pct">Chapter 1 of 6</span>
+        </div>
+        <div class="domain-list">
+          <div class="domain-item done">
+            <span class="domain-num">1.</span>
+            <span>General Security Concepts</span>
+            <span class="domain-status completed">In Progress ⟳</span>
+          </div>
+          <div class="domain-item locked">
+            <span class="domain-num">2.</span>
+            <span>Threats, Attacks & Vulnerabilities</span>
+            <span class="domain-status lock">Locked 🔒</span>
+          </div>
+          <div class="domain-item locked">
+            <span class="domain-num">3.</span>
+            <span>Architecture & Design</span>
+            <span class="domain-status lock">Locked 🔒</span>
+          </div>
+          <div class="domain-item locked">
+            <span class="domain-num">4.</span>
+            <span>Implementation</span>
+            <span class="domain-status lock">Locked 🔒</span>
+          </div>
+          <div class="domain-item locked">
+            <span class="domain-num">5.</span>
+            <span>Operations & Incident Response</span>
+            <span class="domain-status lock">Locked 🔒</span>
+          </div>
+          <div class="domain-item locked">
+            <span class="domain-num">6.</span>
+            <span>Governance, Risk & Compliance</span>
+            <span class="domain-status lock">Locked 🔒</span>
+          </div>
+        </div>
+        <a href="#notes" class="view-all-link">View All Security+ Notes →</a>
+      </div>
+
+      <!-- RIGHT: Featured Lab + Latest Notes -->
+      <div class="right-col">
+
+        <div class="content-card lab-card">
+          <div class="card-label">
+            <span class="label-icon">🔬</span> Featured Lab
+          </div>
+          <div class="lab-content" id="labs">
+            <div class="lab-text">
+              <h3>Setting Up a Home Lab for Cybersecurity</h3>
+              <p>Step-by-step guide to build your own cybersecurity lab using VirtualBox, Kali Linux, and Windows.</p>
+              <a href="#" class="btn-outline">View Lab →</a>
+            </div>
+            <div class="lab-preview">
+              <div class="terminal-preview">
+                <div class="terminal-bar">
+                  <span class="t-dot red"></span>
+                  <span class="t-dot yellow"></span>
+                  <span class="t-dot green"></span>
+                  <span class="t-title">kali@lab:~</span>
+                </div>
+                <div class="terminal-body">
+                  <p><span class="t-green">root@kali</span>:<span class="t-blue">~</span>$ nmap -sV 192.168.1.1</p>
+                  <p class="t-dim">Starting Nmap scan...</p>
+                  <p><span class="t-green">PORT</span>   STATE SERVICE</p>
+                  <p>22/tcp open  ssh</p>
+                  <p>80/tcp open  http</p>
+                  <p class="t-green">Scan complete.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-card notes-card" id="notes">
+          <div class="card-label">
+            <span class="label-icon">📋</span> Latest Notes
+          </div>
+          <div class="notes-list">
+            <a href="#" class="note-item">
+              <span class="note-icon">📄</span>
+              <span class="note-title">What is the CIA Triad?</span>
+              <span class="note-tag general">General Concepts</span>
+            </a>
+            <a href="#" class="note-item locked-note">
+              <span class="note-icon">🔒</span>
+              <span class="note-title">Types of Malware Explained</span>
+              <span class="note-tag threats">Coming Soon</span>
+            </a>
+            <a href="#" class="note-item locked-note">
+              <span class="note-icon">🔒</span>
+              <span class="note-title">Access Control Models</span>
+              <span class="note-tag arch">Coming Soon</span>
+            </a>
+            <a href="#" class="note-item locked-note">
+              <span class="note-icon">🔒</span>
+              <span class="note-title">Public Key Infrastructure (PKI)</span>
+              <span class="note-tag impl">Coming Soon</span>
+            </a>
+            <a href="#" class="note-item locked-note">
+              <span class="note-icon">🔒</span>
+              <span class="note-title">Risk Management Process</span>
+              <span class="note-tag grc">Coming Soon</span>
+            </a>
+          </div>
+          <a href="#" class="view-all-link">View All Notes →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="resources-section" id="resources">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Popular Resources</h2>
+        <a href="#" class="browse-link">Browse All Resources →</a>
+      </div>
+      <div class="resources-grid">
+        <a href="https://www.professormesser.com" target="_blank" class="resource-card">
+          <div class="resource-logo professor">P</div>
+          <div>
+            <strong>Professor Messer</strong>
+            <span>Free Security+ Videos</span>
+            <span class="resource-cta">Watch Now →</span>
+          </div>
+        </a>
+        <a href="https://www.comptia.org" target="_blank" class="resource-card">
+          <div class="resource-logo comptia">C+</div>
+          <div>
+            <strong>CompTIA</strong>
+            <span>Official Resources</span>
+            <span class="resource-cta">Visit →</span>
+          </div>
+        </a>
+        <a href="https://tryhackme.com" target="_blank" class="resource-card">
+          <div class="resource-logo thm">THM</div>
+          <div>
+            <strong>TryHackMe</strong>
+            <span>Hands-on Practice</span>
+            <span class="resource-cta">Start Now →</span>
+          </div>
+        </a>
+        <a href="https://www.examcompass.com" target="_blank" class="resource-card">
+          <div class="resource-logo exams">EC</div>
+          <div>
+            <strong>ExamCompass</strong>
+            <span>Practice Questions</span>
+            <span class="resource-cta">Visit →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + FOOTER -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-col">
+        <h3>About Maenex</h3>
+        <p>Maenex is my personal platform where I document what I learn in cybersecurity and share it for free. I'm based in Wildomar, CA — learning, building, and sharing one concept at a time.</p>
+        <p>I believe knowledge grows when shared. Let's grow together. 🚀</p>
+      </div>
+      <div class="about-col">
+        <h3>My Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-year">2025</span>
+            <span class="timeline-event">Started Cybersecurity Journey</span>
+          </div>
+          <div class="timeline-item active">
+            <span class="timeline-year highlight">2026</span>
+            <span class="timeline-event">Studying Security+ (SY0-701)</span>
+          </div>
+          <div class="timeline-item future">
+            <span class="timeline-year dim">Next</span>
+            <span class="timeline-event dim">Linux+, Network+, and beyond...</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-col">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="#" class="social-btn" title="GitHub">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="LinkedIn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="Email">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p class="built-with">Built with passion · Wildomar, CA 🤍</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="logo.png" alt="Maenex" style="height:32px;width:auto;">
+        <span>© 2026 Maenex. All rights reserved.</span>
+      </div>
+      <div class="footer-right">Made to help others learn. Always free.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
