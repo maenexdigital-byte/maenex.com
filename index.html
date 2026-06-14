@@ -11,8 +11,7 @@
 </head>
 <body>
 
-  <div class="noise"></div>
-
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-brand">
@@ -38,6 +37,7 @@
     </div>
   </nav>
 
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#">Home</a>
     <a href="#secplus">Security+</a>
@@ -47,12 +47,13 @@
     <a href="#about">About</a>
   </div>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Currently studying: CompTIA Security+ (SY0-701)
+          Currently studying: Security+ (SY0-701) &amp; Network+ (N10-009)
         </div>
         <h1 class="hero-title">
           Learn Cybersecurity.<br>
@@ -105,6 +106,7 @@
       </div>
     </div>
 
+    <!-- STATS BAR -->
     <div class="stats-bar">
       <div class="stat-item">
         <span class="stat-icon">🛡️</span>
@@ -153,8 +155,11 @@
     </div>
   </section>
 
+  <!-- MAIN CONTENT GRID -->
   <section class="content-section" id="secplus">
     <div class="content-grid">
+
+      <!-- LEFT: Security+ Topics -->
       <div class="content-card focus-card">
         <div class="card-label">
           <span class="label-icon">🎯</span> Current Focus
@@ -166,48 +171,56 @@
             <p>My study notes, exam objectives, and resources to help you pass Security+.</p>
           </div>
         </div>
-        <div class="progress-wrap">
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 16.6%"></div>
-          </div>
-          <span class="progress-pct">Chapter 1 of 6</span>
-        </div>
         <div class="domain-list">
-          <div class="domain-item done">
-            <span class="domain-num">1.</span>
-            <span>General Security Concepts</span>
-            <span class="domain-status completed">In Progress ⟳</span>
+          <div class="domain-group">
+            <span class="domain-group-title">General Security Concepts</span>
+            <a href="notes/cia-triad.html" class="domain-item done">
+              <span>The CIA Triad</span>
+              <span class="domain-status completed">Available →</span>
+            </a>
           </div>
-          <div class="domain-item locked">
-            <span class="domain-num">2.</span>
-            <span>Threats, Attacks & Vulnerabilities</span>
-            <span class="domain-status lock">Locked 🔒</span>
+          <div class="domain-group">
+            <span class="domain-group-title">Threats, Attacks &amp; Vulnerabilities</span>
+            <div class="domain-item locked">
+              <span>Types of Malware</span>
+              <span class="domain-status lock">Coming Soon 🔒</span>
+            </div>
           </div>
-          <div class="domain-item locked">
-            <span class="domain-num">3.</span>
-            <span>Architecture & Design</span>
-            <span class="domain-status lock">Locked 🔒</span>
+          <div class="domain-group">
+            <span class="domain-group-title">Architecture &amp; Design</span>
+            <div class="domain-item locked">
+              <span>Access Control Models</span>
+              <span class="domain-status lock">Coming Soon 🔒</span>
+            </div>
           </div>
-          <div class="domain-item locked">
-            <span class="domain-num">4.</span>
-            <span>Implementation</span>
-            <span class="domain-status lock">Locked 🔒</span>
+          <div class="domain-group">
+            <span class="domain-group-title">Implementation</span>
+            <div class="domain-item locked">
+              <span>Public Key Infrastructure (PKI)</span>
+              <span class="domain-status lock">Coming Soon 🔒</span>
+            </div>
           </div>
-          <div class="domain-item locked">
-            <span class="domain-num">5.</span>
-            <span>Operations & Incident Response</span>
-            <span class="domain-status lock">Locked 🔒</span>
+          <div class="domain-group">
+            <span class="domain-group-title">Operations &amp; Incident Response</span>
+            <div class="domain-item locked">
+              <span>Incident Response Basics</span>
+              <span class="domain-status lock">Coming Soon 🔒</span>
+            </div>
           </div>
-          <div class="domain-item locked">
-            <span class="domain-num">6.</span>
-            <span>Governance, Risk & Compliance</span>
-            <span class="domain-status lock">Locked 🔒</span>
+          <div class="domain-group">
+            <span class="domain-group-title">Governance, Risk &amp; Compliance</span>
+            <div class="domain-item locked">
+              <span>Risk Management Process</span>
+              <span class="domain-status lock">Coming Soon 🔒</span>
+            </div>
           </div>
         </div>
         <a href="#notes" class="view-all-link">View All Security+ Notes →</a>
       </div>
 
+      <!-- RIGHT: Featured Lab + Latest Notes -->
       <div class="right-col">
+
         <div class="content-card lab-card">
           <div class="card-label">
             <span class="label-icon">🔬</span> Featured Lab
@@ -244,7 +257,7 @@
             <span class="label-icon">📋</span> Latest Notes
           </div>
           <div class="notes-list">
-            <a href="#" class="note-item">
+            <a href="notes/cia-triad.html" class="note-item">
               <span class="note-icon">📄</span>
               <span class="note-title">What is the CIA Triad?</span>
               <span class="note-tag general">General Concepts</span>
@@ -272,10 +285,12 @@
           </div>
           <a href="#" class="view-all-link">View All Notes →</a>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- RESOURCES -->
   <section class="resources-section" id="resources">
     <div class="section-inner">
       <div class="section-header">
@@ -319,6 +334,7 @@
     </div>
   </section>
 
+  <!-- ABOUT + FOOTER -->
   <section class="about-section" id="about">
     <div class="about-grid">
       <div class="about-col">
