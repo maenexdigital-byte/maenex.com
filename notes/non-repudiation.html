@@ -52,7 +52,7 @@
       <p class="note-subtitle">Proof that an action cannot be denied later</p>
 
       <p class="note-intro">
-        <strong>Non-repudiation</strong> means that someone who performed an action — sending a message, signing a document, making a transaction — cannot later deny that they did it. It provides proof of origin and proof of integrity.
+        <strong>Non-repudiation</strong> is the assurance that a sender cannot later deny performing an action, such as sending a message or signing a document.
       </p>
 
       <div class="callout">
@@ -60,6 +60,20 @@
         <p>If Person A signs a document with their private key, they can't later claim "I never signed that" — the signature is mathematical proof tied only to them.</p>
       </div>
 
+      <h2 class="section-h2">How It's Achieved</h2>
+      <p class="note-intro">
+        Non-repudiation is achieved through digital signatures, which rely on three things working together:
+      </p>
+
+      <div class="key-points-block">
+        <ul>
+          <li><strong>Private key</strong> → proves the sender's identity.</li>
+          <li><strong>Hashing</strong> → verifies data integrity.</li>
+          <li><strong>Public key verification</strong> → confirms the signature is valid.</li>
+        </ul>
+      </div>
+
+      <!-- DIGITAL SIGNATURE DIAGRAM -->
       <h2 class="section-h2">How a Digital Signature Provides Non-repudiation</h2>
 
       <div class="sig-diagram">
@@ -109,6 +123,7 @@
 
       </div>
 
+      <!-- KEY POINTS -->
       <div class="triad-cards two-col">
         <div class="triad-card card-confidentiality">
           <div class="triad-card-icon">🔑</div>
