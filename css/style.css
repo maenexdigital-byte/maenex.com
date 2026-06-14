@@ -445,31 +445,18 @@ body {
 .focus-header h3 { font-size: 0.95rem; margin-bottom: 4px; }
 .focus-header p { font-size: 0.8rem; color: var(--text2); }
 
-.progress-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+.domain-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+
+.domain-group { display: flex; flex-direction: column; gap: 6px; }
+
+.domain-group-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding-left: 12px;
 }
-
-.progress-bar {
-  flex: 1;
-  height: 6px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--blue) 0%, var(--blue2) 100%);
-  border-radius: 3px;
-  transition: width 1s ease;
-}
-
-.progress-pct { font-size: 0.78rem; color: var(--text2); white-space: nowrap; }
-
-.domain-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
 
 .domain-item {
   display: flex;
@@ -480,6 +467,9 @@ body {
   font-size: 0.83rem;
   background: rgba(255,255,255,0.02);
   border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.15s;
 }
 
 .domain-item.done {
@@ -487,9 +477,11 @@ body {
   border-color: var(--border2);
 }
 
-.domain-item.locked { opacity: 0.5; }
+.domain-item.done:hover {
+  background: rgba(58,142,246,0.14);
+}
 
-.domain-num { color: var(--text3); font-family: var(--font-mono); font-size: 0.75rem; }
+.domain-item.locked { opacity: 0.5; }
 
 .domain-status {
   margin-left: auto;
