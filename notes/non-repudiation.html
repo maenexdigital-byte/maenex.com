@@ -1,167 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Non-repudiation | Maenex Notes</title>
-  <meta name="description" content="What non-repudiation means in cybersecurity, and how digital signatures provide proof that an action cannot be denied later.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/notes.css">
-</head>
-<body>
+/* ===== MAENEX · notes.css ===== */
 
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-brand">
-        <img src="../logo.png" alt="Maenex" class="nav-logo">
-        <span class="nav-name">MAENEX</span>
-      </a>
-      <div class="nav-links">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../index.html#secplus" class="nav-link">Security+</a>
-        <a href="../index.html#labs" class="nav-link">Labs</a>
-        <a href="../index.html#notes" class="nav-link active">Notes</a>
-        <a href="../index.html#resources" class="nav-link">Resources</a>
-        <a href="../index.html#about" class="nav-link">About</a>
-      </div>
-      <button class="nav-menu-btn" id="menuBtn">☰</button>
-    </div>
-  </nav>
+.note-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 100px 24px 60px;
+}
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="../index.html">Home</a>
-    <a href="../index.html#secplus">Security+</a>
-    <a href="../index.html#labs">Labs</a>
-    <a href="../index.html#notes">Notes</a>
-    <a href="../index.html#resources">Resources</a>
-    <a href="../index.html#about">About</a>
-  </div>
+.back-link {
+  display: inline-block;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
 
-  <main class="note-page">
-    <div class="note-container">
+.back-link:hover { color: var(--blue2); }
 
-      <a href="../index.html#notes" class="back-link">← Back to Notes</a>
+.note-meta { margin-bottom: 12px; }
 
-      <div class="note-meta">
-        <span class="note-eyebrow">General Security Concepts</span>
-      </div>
+.note-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c084fc;
+  border-bottom: 2px solid #c084fc;
+  padding-bottom: 4px;
+}
 
-      <h1 class="note-title">Non-<span class="accent-gradient">repudiation</span></h1>
-      <p class="note-subtitle">Proof that an action cannot be denied later</p>
+.note-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
 
-      <p class="note-intro">
-        <strong>Non-repudiation</strong> is the assurance that a sender cannot later deny performing an action, such as sending a message or signing a document.
-      </p>
+.note-subtitle {
+  font-size: 1.05rem;
+  color: var(--text2);
+  margin-bottom: 24px;
+}
 
-      <div class="callout">
-        <span class="callout-icon">✍️</span>
-        <p>If Person A signs a document with their private key, they can't later claim "I never signed that" — the signature is mathematical proof tied only to them.</p>
-      </div>
+.note-intro {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
 
-      <h2 class="section-h2">How It's Achieved</h2>
-      <p class="note-intro">
-        Non-repudiation is achieved through digital signatures, which rely on three things working together:
-      </p>
+.note-intro strong { color: var(--blue2); }
 
-      <div class="key-points-block">
-        <ul>
-          <li><strong>Private key</strong> → proves the sender's identity.</li>
-          <li><strong>Hashing</strong> → verifies data integrity.</li>
-          <li><strong>Public key verification</strong> → confirms the signature is valid.</li>
-        </ul>
-      </div>
+/* CALLOUT */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 36px;
+}
 
-      <!-- DIGITAL SIGNATURE DIAGRAM -->
-      <h2 class="section-h2">How a Digital Signature Provides Non-repudiation</h2>
+.callout-icon { font-size: 1.4rem; flex-shrink: 0; }
 
-      <div class="sig-diagram">
+.callout p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+}
 
-        <div class="sig-stage">
-          <div class="sig-box sig-doc">
-            <span class="sig-icon">📄</span>
-            <span class="sig-label">Original Document</span>
-            <span class="sig-sub">"Pay $5,000 to Vendor X"</span>
-          </div>
-          <span class="sig-arrow">→</span>
-          <div class="sig-box sig-hash">
-            <span class="sig-icon">#️⃣</span>
-            <span class="sig-label">Hash Function</span>
-            <span class="sig-sub">Creates a unique fingerprint</span>
-          </div>
-          <span class="sig-arrow">→</span>
-          <div class="sig-box sig-key">
-            <span class="sig-icon">🔑</span>
-            <span class="sig-label">Signed with Sender's Private Key</span>
-            <span class="sig-sub">Only the sender has this key</span>
-          </div>
-        </div>
+.callout-summary {
+  margin-top: 36px;
+  border-color: rgba(192,132,252,0.25);
+  background: linear-gradient(135deg, rgba(58,142,246,0.06), rgba(192,132,252,0.06));
+}
 
-        <div class="sig-result">
-          <span class="sig-arrow-down">↓</span>
-          <div class="sig-box sig-final">
-            <span class="sig-icon">🛡️</span>
-            <span class="sig-label">Digitally Signed Document</span>
-            <span class="sig-sub">Sent to recipient</span>
-          </div>
-        </div>
+.text-confidentiality { color: #c084fc; font-weight: 600; }
+.text-integrity { color: var(--blue2); font-weight: 600; }
+.text-availability { color: #d8b4fe; font-weight: 600; }
 
-        <div class="sig-stage sig-verify">
-          <div class="sig-box sig-verify-box">
-            <span class="sig-icon">🔓</span>
-            <span class="sig-label">Recipient Verifies with Sender's Public Key</span>
-            <span class="sig-sub">Confirms it came from the sender and wasn't altered</span>
-          </div>
-          <span class="sig-arrow">→</span>
-          <div class="sig-box sig-outcome">
-            <span class="sig-icon">✅</span>
-            <span class="sig-label">Non-repudiation Achieved</span>
-            <span class="sig-sub">Sender cannot deny signing it</span>
-          </div>
-        </div>
+/* TRIAD DIAGRAM */
+.triad-diagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
 
-      </div>
+.triad-pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
-      <!-- KEY POINTS -->
-      <div class="triad-cards two-col">
-        <div class="triad-card card-confidentiality">
-          <div class="triad-card-icon">🔑</div>
-          <h3>Private Key = Identity</h3>
-          <p>Only the sender holds their private key. Signing something with it is like a unique, unforgeable fingerprint tied directly to them.</p>
-        </div>
-        <div class="triad-card card-integrity">
-          <div class="triad-card-icon">#️⃣</div>
-          <h3>Hashing = Integrity</h3>
-          <p>The hash proves the document wasn't changed after signing. If even one character changes, the hash changes completely.</p>
-        </div>
-      </div>
+.triad-pillar .pillar-icon { font-size: 1.8rem; }
 
-      <div class="callout callout-summary">
-        <span class="callout-icon">🛡️</span>
-        <p>
-          Digital signatures combine <span class="text-confidentiality">a private key</span> (proves who signed it) with <span class="text-integrity">hashing</span> (proves it wasn't altered) — together they create <strong>non-repudiation</strong>.
-        </p>
-      </div>
+.triad-pillar.confidentiality {
+  background: linear-gradient(135deg, rgba(192,132,252,0.12), rgba(58,142,246,0.06));
+  border: 1px solid rgba(192,132,252,0.3);
+  color: #d8b4fe;
+}
 
-      <div class="note-nav">
-        <a href="../index.html#notes" class="btn-ghost">← All Notes</a>
-        <span class="note-nav-next">Next up: Types of Malware (coming soon)</span>
-      </div>
+.triad-pillar.integrity {
+  background: linear-gradient(135deg, rgba(58,142,246,0.14), rgba(58,142,246,0.04));
+  border: 1px solid rgba(58,142,246,0.3);
+  color: var(--blue2);
+}
 
-    </div>
-  </main>
+.triad-pillar.availability {
+  background: linear-gradient(135deg, rgba(192,132,252,0.1), rgba(91,164,248,0.08));
+  border: 1px solid rgba(192,132,252,0.25);
+  color: #e9d5ff;
+}
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <img src="../logo.png" alt="Maenex" style="height:32px;width:auto;">
-        <span>© 2026 Maenex. All rights reserved.</span>
-      </div>
-      <div class="footer-right">Made to help others learn. Always free.</div>
-    </div>
-  </footer>
+/* THREE CARDS */
+.triad-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
 
-  <script src="../js/main.js"></script>
-</body>
-</html>
+.triad-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.triad-card-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  border: 1px solid var(--border2);
+}
+
+.card-confidentiality .triad-card-icon { background: rgba(192,132,252,0.1); border-color: rgba(192,132,252,0.3); }
+.card-integrity .triad-card-icon { background: rgba(58,142,246,0.1); border-color: rgba(58,142,246,0.3); }
+.card-availability .triad-card-icon { background: rgba(192,132,252,0.08); border-color: rgba(192,132,252,0.25); }
+
+.triad-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-confidentiality h3 { color: #d8b4fe; }
+.card-integrity h3 { color: var(--blue2); }
+.card-availability h3 { color: #e9d5ff; }
+
+.triad-card p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.kp-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+
+.key-points ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.key-points li {
+  font-size: 0.83rem;
+  color: var(--text);
+  padding-left: 16px;
+  position: relative;
+}
+
+.key-points li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+
+.card-confidentiality .key-points li::before { color: #c084fc; }
+.card-availability .key-points li::before { color: #c084fc; }
+
+/* NOTE NAV */
+.note-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.note-nav-next {
+  font-size: 0.85rem;
+  color: var(--text3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .triad-diagram { grid-template-columns: 1fr; }
+  .triad-cards { grid-template-columns: 1fr; }
+}
+
+/* SECTION HEADING */
+.section-h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 40px 0 20px;
+}
+
+.key-points-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+}
+
+.key-points-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.key-points-block li {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.key-points-block li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+
+.key-points-block li strong {
+  color: var(--blue2);
+}
+
+/* DIGITAL SIGNATURE DIAGRAM */
+.sig-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.sig-stage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sig-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.sig-icon { font-size: 1.6rem; }
+
+.sig-label {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sig-sub {
+  font-size: 0.75rem;
+  color: var(--text2);
+}
+
+.sig-arrow {
+  font-size: 1.4rem;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.sig-key {
+  border-color: rgba(192,132,252,0.3);
+  background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(58,142,246,0.04));
+}
+
+.sig-key .sig-label { color: #d8b4fe; }
+
+.sig-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sig-arrow-down {
+  font-size: 1.4rem;
+  color: var(--text3);
+}
+
+.sig-final {
+  max-width: 320px;
+  border-color: var(--border2);
+  background: linear-gradient(135deg, rgba(58,142,246,0.1), rgba(91,164,248,0.04));
+}
+
+.sig-final .sig-label { color: var(--blue2); }
+
+.sig-verify {
+  align-items: stretch;
+}
+
+.sig-outcome {
+  border-color: rgba(34,197,94,0.3);
+  background: linear-gradient(135deg, rgba(34,197,94,0.08), transparent);
+}
+
+.sig-outcome .sig-label { color: #4ade80; }
+
+/* TWO COLUMN VARIANT FOR TRIAD CARDS */
+.triad-cards.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 800px) {
+  .sig-stage { flex-direction: column; }
+  .sig-arrow { transform: rotate(90deg); }
+  .triad-cards.two-col { grid-template-columns: 1fr; }
+}
