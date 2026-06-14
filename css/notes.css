@@ -53,6 +53,7 @@
 
 .note-intro strong { color: var(--blue2); }
 
+/* CALLOUT */
 .callout {
   display: flex;
   align-items: flex-start;
@@ -82,6 +83,7 @@
 .text-integrity { color: var(--blue2); font-weight: 600; }
 .text-availability { color: #d8b4fe; font-weight: 600; }
 
+/* TRIAD DIAGRAM */
 .triad-diagram {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -124,6 +126,7 @@
   color: #e9d5ff;
 }
 
+/* THREE CARDS */
 .triad-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,6 +208,7 @@
 .card-confidentiality .key-points li::before { color: #c084fc; }
 .card-availability .key-points li::before { color: #c084fc; }
 
+/* NOTE NAV */
 .note-nav {
   display: flex;
   justify-content: space-between;
@@ -221,11 +225,13 @@
   color: var(--text3);
 }
 
+/* RESPONSIVE */
 @media (max-width: 800px) {
   .triad-diagram { grid-template-columns: 1fr; }
   .triad-cards { grid-template-columns: 1fr; }
 }
 
+/* SECTION HEADING */
 .section-h2 {
   font-family: var(--font-display);
   font-size: 1.4rem;
@@ -233,6 +239,41 @@
   margin: 40px 0 20px;
 }
 
+.key-points-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+}
+
+.key-points-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.key-points-block li {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.key-points-block li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+
+.key-points-block li strong {
+  color: var(--blue2);
+}
+
+/* DIGITAL SIGNATURE DIAGRAM */
 .sig-diagram {
   display: flex;
   flex-direction: column;
@@ -316,6 +357,7 @@
 
 .sig-outcome .sig-label { color: #4ade80; }
 
+/* TWO COLUMN VARIANT FOR TRIAD CARDS */
 .triad-cards.two-col {
   grid-template-columns: repeat(2, 1fr);
 }
