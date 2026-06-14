@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-repudiation | Maenex Notes</title>
+  <meta name="description" content="What non-repudiation means in cybersecurity, and how digital signatures provide proof that an action cannot be denied later.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/notes.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">
+        <img src="../logo.png" alt="Maenex" class="nav-logo">
+        <span class="nav-name">MAENEX</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#secplus" class="nav-link">Security+</a>
+        <a href="../index.html#labs" class="nav-link">Labs</a>
+        <a href="../index.html#notes" class="nav-link active">Notes</a>
+        <a href="../index.html#resources" class="nav-link">Resources</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+      </div>
+      <button class="nav-menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#secplus">Security+</a>
+    <a href="../index.html#labs">Labs</a>
+    <a href="../index.html#notes">Notes</a>
+    <a href="../index.html#resources">Resources</a>
+    <a href="../index.html#about">About</a>
+  </div>
+
+  <main class="note-page">
+    <div class="note-container">
+
+      <a href="../index.html#notes" class="back-link">← Back to Notes</a>
+
+      <div class="note-meta">
+        <span class="note-eyebrow">General Security Concepts</span>
+      </div>
+
+      <h1 class="note-title">Non-<span class="accent-gradient">repudiation</span></h1>
+      <p class="note-subtitle">Proof that an action cannot be denied later</p>
+
+      <p class="note-intro">
+        <strong>Non-repudiation</strong> means that someone who performed an action — sending a message, signing a document, making a transaction — cannot later deny that they did it. It provides proof of origin and proof of integrity.
+      </p>
+
+      <div class="callout">
+        <span class="callout-icon">✍️</span>
+        <p>If Person A signs a document with their private key, they can't later claim "I never signed that" — the signature is mathematical proof tied only to them.</p>
+      </div>
+
+      <h2 class="section-h2">How a Digital Signature Provides Non-repudiation</h2>
+
+      <div class="sig-diagram">
+
+        <div class="sig-stage">
+          <div class="sig-box sig-doc">
+            <span class="sig-icon">📄</span>
+            <span class="sig-label">Original Document</span>
+            <span class="sig-sub">"Pay $5,000 to Vendor X"</span>
+          </div>
+          <span class="sig-arrow">→</span>
+          <div class="sig-box sig-hash">
+            <span class="sig-icon">#️⃣</span>
+            <span class="sig-label">Hash Function</span>
+            <span class="sig-sub">Creates a unique fingerprint</span>
+          </div>
+          <span class="sig-arrow">→</span>
+          <div class="sig-box sig-key">
+            <span class="sig-icon">🔑</span>
+            <span class="sig-label">Signed with Sender's Private Key</span>
+            <span class="sig-sub">Only the sender has this key</span>
+          </div>
+        </div>
+
+        <div class="sig-result">
+          <span class="sig-arrow-down">↓</span>
+          <div class="sig-box sig-final">
+            <span class="sig-icon">🛡️</span>
+            <span class="sig-label">Digitally Signed Document</span>
+            <span class="sig-sub">Sent to recipient</span>
+          </div>
+        </div>
+
+        <div class="sig-stage sig-verify">
+          <div class="sig-box sig-verify-box">
+            <span class="sig-icon">🔓</span>
+            <span class="sig-label">Recipient Verifies with Sender's Public Key</span>
+            <span class="sig-sub">Confirms it came from the sender and wasn't altered</span>
+          </div>
+          <span class="sig-arrow">→</span>
+          <div class="sig-box sig-outcome">
+            <span class="sig-icon">✅</span>
+            <span class="sig-label">Non-repudiation Achieved</span>
+            <span class="sig-sub">Sender cannot deny signing it</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="triad-cards two-col">
+        <div class="triad-card card-confidentiality">
+          <div class="triad-card-icon">🔑</div>
+          <h3>Private Key = Identity</h3>
+          <p>Only the sender holds their private key. Signing something with it is like a unique, unforgeable fingerprint tied directly to them.</p>
+        </div>
+        <div class="triad-card card-integrity">
+          <div class="triad-card-icon">#️⃣</div>
+          <h3>Hashing = Integrity</h3>
+          <p>The hash proves the document wasn't changed after signing. If even one character changes, the hash changes completely.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-summary">
+        <span class="callout-icon">🛡️</span>
+        <p>
+          Digital signatures combine <span class="text-confidentiality">a private key</span> (proves who signed it) with <span class="text-integrity">hashing</span> (proves it wasn't altered) — together they create <strong>non-repudiation</strong>.
+        </p>
+      </div>
+
+      <div class="note-nav">
+        <a href="../index.html#notes" class="btn-ghost">← All Notes</a>
+        <span class="note-nav-next">Next up: Types of Malware (coming soon)</span>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="../logo.png" alt="Maenex" style="height:32px;width:auto;">
+        <span>© 2026 Maenex. All rights reserved.</span>
+      </div>
+      <div class="footer-right">Made to help others learn. Always free.</div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
